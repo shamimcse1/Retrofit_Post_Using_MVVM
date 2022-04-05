@@ -20,7 +20,6 @@ public class UserRepository {
     public ApiInterface apiInterface;
 
 
-
     private MutableLiveData mutableLiveData = new MutableLiveData<DataResource<User>>();
     public LiveData<DataResource<User>> liveData = mutableLiveData;
 

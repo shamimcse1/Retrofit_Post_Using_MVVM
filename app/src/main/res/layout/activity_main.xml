@@ -20,6 +20,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="15dp"
             android:layout_marginRight="15dp"
+            android:imeOptions="actionNext"
             android:inputType="text" />
 
         <TextView
@@ -36,6 +37,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="15dp"
             android:layout_marginRight="15dp"
+            android:imeOptions="actionDone"
             android:inputType="text" />
 
         <Button

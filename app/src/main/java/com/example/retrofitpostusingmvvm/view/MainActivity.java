@@ -68,22 +68,25 @@ public class MainActivity extends AppCompatActivity {
                 name = binding.name.getText().toString();
                 job = binding.job.getText().toString();
 
-                User user = new User(name, job);
-                userViewModel.postUserData(user);
+                if (!isEmpty(name,job)){
+                    User user = new User(name, job);
+                    userViewModel.postUserData(user);
+                }
+
 
             }
         });
 
     }
 
-    public boolean isEmpty(EditText name, EditText job) {
+    public boolean isEmpty(String name, String job) {
         boolean isEmptyResult = false;
-        if (name.getText().toString().length() == 0) {
-            name.setError("");
+        if (name.length() == 0) {
+            binding.name.setError("Enter Name");
             isEmptyResult = true;
         }
-        if (job.getText().toString().length() == 0) {
-            name.setError("");
+        if (job.length() == 0) {
+            binding.job.setError("Enter Job");
             isEmptyResult = true;
         }
         return isEmptyResult;
